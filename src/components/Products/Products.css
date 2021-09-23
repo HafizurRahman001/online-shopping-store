@@ -1,0 +1,22 @@
+.product {
+  padding: 10px;
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+.products-image img {
+  margin-right: 8px;
+}
+.product-title {
+  color: blue;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.purchase {
+  background-color: crimson;
+  color: white;
+  width: 140px;
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}

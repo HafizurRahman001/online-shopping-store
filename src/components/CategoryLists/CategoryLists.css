@@ -1,0 +1,8 @@
+.category h4 {
+  padding: 5px 5px;
+  border-bottom: 1px solid rgb(153, 150, 150);
+  color: white;
+}
+.category h4:hover {
+  background-color: crimson;
+}

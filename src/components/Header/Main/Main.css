@@ -1,0 +1,18 @@
+.main-section {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.left-section {
+  background-color: #227293;
+}
+.left-section h3 {
+  background-color: rgb(150, 36, 36);
+  color: white;
+  padding: 3px 2px;
+  text-align: center;
+}
+.right-section {
+  /* background-color: salmon; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
