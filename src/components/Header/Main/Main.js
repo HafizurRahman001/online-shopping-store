@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { addToLocalStorage, removeCart } from '../../../Storage Data/Storage';
 import CategoryLists from '../../CategoryLists/CategoryLists';
 import Footer from '../../Footer/Footer';
 import Products from '../../Products/Products';
@@ -17,6 +18,12 @@ const Main = () => {
     const purchaseProduct = product => {
         const newCart = [...cart, product];
         setCart(newCart);
+        addToLocalStorage(product.key);
+    }
+
+    const deleteCart = key => {
+        removeCart(key);
+
     }
     return (
         <div style={{ margin: '12px 0px', border: '1px solid lightgray' }}>
@@ -31,7 +38,7 @@ const Main = () => {
                 </div>
                 <div className="right-section">
                     {
-                        products.map(product => <Products product={product} purchaseProduct={purchaseProduct} />)
+                        products.map(product => <Products key={product.key} product={product} purchaseProduct={purchaseProduct} deleteCart={deleteCart} />)
                     }
                 </div>
             </div>
